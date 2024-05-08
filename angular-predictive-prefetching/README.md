@@ -22,8 +22,11 @@ cd server && yarn start
 ```
 
 * Start the client. In a terminal window run:
+* node version causing digital-envelope-routinesunsupported error, reset the NODE_OPTIONS
 
 ```shell
+export NODE_OPTIONS=--openssl-legacy-provider
+
 cd client && yarn build
 cd dist/merch-store
 npx serve -s .
